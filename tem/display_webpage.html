@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display webpage</title>
+</head>
+<body>
+    <center>
+        <h1>Displaying WebPage</h1>
+        <table border="2px">
+            <tr>
+                <th>
+                    Topic Name
+                </th>
+                <th>
+                    Name
+                </th>
+                <th>URL</th>
+                <th>Email</th>
+            </tr>
+            {% for w in webpages %}
+            <tr>
+                <td>
+                    {{w.topic_name}}
+                </td>
+                <td>
+                    {{w.name}}
+                </td>
+                <td>
+                    {{w.url}}
+                </td>
+                <td>
+                    {{w.email}}
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </center>
+</body>
+</html>
